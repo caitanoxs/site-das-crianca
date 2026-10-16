@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Matemático do Parque</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Desafio Matemático do Parque</h1>
+        <p>Ajude o Mordecai e o Rigby a salvar o parque resolvendo cálculos!</p>
+    </header>
+
+    <!-- MAIN agora é apenas um container largo, sem caixa -->
+    <main>
+        
+        <!-- TELA 1: INÍCIO -->
+        <section id="tela-inicio" class="tela ativa">
+            <img src="img/grupo.png" alt="Grupo do Parque" class="img-personagem destaque" onerror="this.src='https://via.placeholder.com/300x300/cccccc/000000?text=Imagem'">
+            <h2>Pronto para o desafio?</h2>
+            <p>Você tem 3 vidas. Se errar, o Benson vai ficar muito bravo!</p>
+            <button id="btn-iniciar" class="btn-principal">Começar a Jogar</button>
+        </section>
+
+        <!-- TELA 2: QUIZ -->
+        <section id="tela-quiz" class="tela escondida">
+            
+            <div class="cabecalho-quiz">
+                <span id="pontuacao">Pontos: 0</span>
+                <span id="vidas">Vidas: ❤️❤️❤️</span>
+            </div>
+            
+            <div class="barra-progresso">
+                <div id="progresso"></div>
+            </div>
+
+            <!-- Área da pergunta com fundo semi-transparente para leitura -->
+            <div class="area-pergunta">
+                <img src="img/rigby.png" alt="Rigby Pensando" class="img-personagem mascote flutuando" onerror="this.src='https://via.placeholder.com/150x150/cccccc/000000?text=Rigby'">
+                <h3 id="texto-pergunta">Carregando pergunta...</h3>
+            </div>
+
+            <!-- Opções agora ficam em grade (lado a lado no PC) -->
+            <div id="opcoes-resposta" class="opcoes">
+                <!-- As opções serão inseridas pelo JavaScript -->
+            </div>
+        </section>
+
+        <!-- TELA 3: FIM DE JOGO -->
+        <section id="tela-fim" class="tela escondida">
+            <img id="img-fim" src="img/benson.png" alt="Fim de Jogo" class="img-personagem destaque" onerror="this.src='https://via.placeholder.com/300x300/cccccc/000000?text=Fim'">
+            <h2 id="titulo-fim">Fim de Jogo!</h2>
+            <p id="mensagem-fim">Você fez 0 pontos.</p>
+            <button id="btn-reiniciar" class="btn-principal">Jogar Novamente</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Projeto Educativo - 6º Ano do Ensino Fundamental</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
